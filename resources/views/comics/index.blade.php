@@ -17,12 +17,15 @@
                     <h5 class="card-title">{{$comic->japanese_title}}</h5>
                     <h5 class="card-title">{{$comic->author}}</h5>
                     <h5 class="card-title">{{$comic->release_date}}</h5>
-                    <p class="card-text">{{$comic->summary}}</p>
                     <span>{{$comic->price}}$</span>
 
-                    <h3>{{$comic->available}}</h3>
+                    @if($comic->available == 1)
+                        <h4 class=" p-3 text-success">In stock!</h4>
+                    @else 
+                        <h4 class="p-3">-</h4>
+                    @endif
 
-                    <a href="{{ route("comics.show", $comic) }}" class="btn btn-primary">Start Reading</a>
+                    <a href="{{ route("comics.show", $comic) }}" class="btn btn-outline-dark">Start Reading</a>
                 </div>
             </div>
         @empty
