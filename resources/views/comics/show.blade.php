@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 @endsection
 
-
-
 @section('section-content')
     <div class="row d-flex justify-content-center mt-5">
         <div class="col-6 text-center">

@@ -11243,3 +11243,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.logo {
+  width: 75px;
+  margin-right: 25px;
+}

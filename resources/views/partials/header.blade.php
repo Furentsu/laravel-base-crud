@@ -7,13 +7,20 @@
       </button>
       
       {{-- Header Logo --}}
-      <a class="navbar-brand" href="#">Logo</a>
+      <div class="logo">
+        <img class="img-fluid" src="{{ asset('img/manga_logo.png') }}" alt="Manga-art Logo">
+      </div>
+     
       <div class="collapse navbar-collapse" id="navbarNav">
 
         {{-- Header Navbar --}}
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route("comics.index")}}">Our Mangas</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route("comics.create")}}">Propose your Manga</a>
           </li>
         </ul>
       </div>
