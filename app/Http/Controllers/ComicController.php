@@ -45,6 +45,7 @@ class ComicController extends Controller
         $comic->available = 1;
         
         $comic->save();
+        return redirect()->route('comics.index');
 
     }
 
