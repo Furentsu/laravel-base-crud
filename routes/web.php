@@ -17,8 +17,11 @@ Route::get('/', function() {
     return redirect()->route('comics.index');
 });
 
-Route::resource('comics','ComicController');
+
+// Route::middleware('auth')->resource('comics','ComicController'); --> (Per visualizzare la pagina comics solo dopo autenticazione)
 
 Auth::routes();
+
+Route::resource('comics','ComicController');
 
 Route::get('/home', 'HomeController@index')->name('home');
