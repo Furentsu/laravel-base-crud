@@ -25,7 +25,20 @@
                         <h4 class="p-3">-</h4>
                     @endif
 
-                    <a href="{{ route("comics.show", $comic) }}" class="btn btn-outline-dark">Start Reading</a>
+                    {{-- SHOW --}}
+                    <a href="{{ route("comics.show", $comic) }}" class="mb-2 btn btn-outline-dark">Start Reading</a>
+
+                    {{-- EDIT --}}
+                    <a href="{{ route("comics.edit", $comic) }}" class="mb-2 btn btn-outline-dark">Edit this comic</a>
+                    
+                    {{-- DELETE --}}
+                    <form action="{{ route("comics.destroy", $comic) }}" method="POST">
+                        @csrf
+                        @method('delete')
+
+                        <button class="btn btn-danger" type="submit">Delete this comic</button>
+                    </form>
+
                 </div>
             </div>
         @empty
